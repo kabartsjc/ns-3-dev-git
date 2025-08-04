@@ -1,0 +1,16 @@
+0) check the inconsistences in the deletion of the aircrafts (check the calculus of ts)
+
+
+1) Modify altitudes and speeds in the waypoints follow the flight plan rules
+
+2) change the timeout to start the flights
+
+3) delete the aircrafts
+
+4) log infra
+
+
+5) dynamic ai controllers
+
+
+6) network communication emulation

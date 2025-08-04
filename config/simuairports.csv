@@ -1,0 +1,57 @@
+icao_id,nome,pais,latitude,longitude,altitude,runway_heading
+SBAR,Aracaju - Santa Maria International Airport,BR,-10984,-37.070301,139.0,
+SBBE,Val de Cans/Júlio Cezar Ribeiro International Airport,BR,-1.379279,-48.476207,54.0,95.0
+SBAQ,Pampulha - Carlos Drummond de Andrade Airport,BR,-19.85074,-43.950316,2589.0,
+SBBR,Presidente Juscelino Kubitschek International Airport,BR,-15.869167,-47.920834,3497.0,176.0
+SBBV,Atlas Brasil Cantanhede Airport,BR,2.845855,-60.690944,276.0,
+SBCF,Tancredo Neves International Airport,BR,-19.63571,-43.966928,2721.0,229.0
+SBCG,Campo Grande Airport,BR,-20.469998,-54.673988,1833.0,
+SBCH,Serafin Enoss Bertaso Airport,BR,-27.134199,-52.656601,2154.0,
+SBCI,Brig. Lysias Augusto Rodrigues Airport,BR,-7.32044,-47.458698,565.0,
+SBCR,Corumbá International Airport,BR,-19.01193,-57.672772,463.0,
+SBCT,Afonso Pena Airport,BR,-25.5285,-49.1758,2988.0,225.0
+SBCY,Marechal Rondon Airport,BR,-15.6529,-56.116699,617.0,243.0
+SBEG,Eduardo Gomes International Airport,BR,-3.03861,-60.049702,264.0,196.0
+SBES,Tenente Jorge Henrique Möller Airport,BR,-22.812901,-42.092602,61.0,
+SBFI,Cataratas International Airport,BR,-25.594167,-54.489444,786.0,220.5
+SBFL,Hercílio Luz International Airport,BR,-27.670279,-48.552502,16.0,249.0
+SBFN,Fernando de Noronha Airport,BR,-3.854471,-32.423302,193.0,
+SBFZ,Pinto Martins International Airport,BR,-3.775833,-38.532222,83.0,195.0
+SBGL,Rio Galeão – Tom Jobim International Airport,BR,-22.809999,-43.250557,28.0,189.5
+SBGO,Santa Genoveva Airport,BR,-16632,-49.220699,2450.0,210.0
+SBGR,Guarulhos - Governador André Franco Montoro International Airport,BR,-23.431944,-46.467778,2461.0,164.0
+SBIL,Bahia - Jorge Amado Airport,BR,-14.815929,-39.033458,15.0,
+SBJP,Presidente Castro Pinto International Airport,BR,-7.148691,-34.950554,217.0,
+SBJR,Jacarepaguá - Roberto Marinho Airport,BR,-22.986773,-43.372194,10.0,
+SBJU,Orlando Bezerra de Menezes Airport,BR,-7.21932,-39.269096,1342.0,
+SBKP,Viracopos International Airport,BR,-23.007404,-47.134502,2170.0,218.0
+SBLO,Governor José Richa Airport,BR,-23.334375,-51.128365,1867.0,202.0
+SBME,Macaé Benedito Lacerda Airport,BR,-22343,-41.765999,8.0,
+SBMG,Regional de Maringá - Sílvio Name Júnior Airport,BR,-23.47606,-52.016187,1801.0,
+SBMN,Ponta Pelada Airport / Manaus Air Base,BR,-3.14604,-59.986301,267.0,
+SBMO,Zumbi dos Palmares Airport,BR,-9.51081,-35.791698,387.0,190.0
+SBMQ,Macapá - Alberto Alcolumbre International Airport,BR,0.050664,-51.072201,56.0,
+SBNT,Natal Air Force Base,BR,-5.91142,-35.2477,171.0,217.0
+SBPA,Salgado Filho International Airport,BR,-29.994712,-51.166592,11.0,181.0
+SBPB,Parnaíba - Prefeito Doutor João Silva Filho International Airport,BR,-2.89375,-41.731998,23.0,
+SBPC,Poços de Caldas - Embaixador Walther Moreira Salles Airport,BR,-21.842529,-46.569768,4138.0,
+SBPF,Lauro Kurtz Airport,BR,-28.243976,-52.32777,2380.0,
+SBPL,Senador Nilo Coelho Airport,BR,-9.362422,-40.569098,1263.0,
+SBPR,Carlos Prates Airport,BR,-19.909629,-43.989179,3044.0,
+SBPS,Porto Seguro Airport,BR,-16.438426,-39.080584,169.0,164.0
+SBPV,Governador Jorge Teixeira de Oliveira Airport,BR,-8.707854,-63.90242,295.0,
+SBRB,Rio Branco-Plácido de Castro International Airport,BR,-9.869031,-67.893984,633.0,
+SBRF,Recife/Guararapes - Gilberto Freyre International Airport,BR,-8.125984,-34.923316,33.0,252.0
+SBRJ,Santos Dumont Airport,BR,-22.9105,-43.163101,11.0,110.0
+SBRP,Leite Lopes Airport,BR,-21.134314,-47.774053,1805.0,250.0
+SBSL,Marechal Cunha Machado International Airport,BR,-2.58536,-44.2341,178.0,144.5
+SBSM,Santa Maria Airport,BR,-29.711399,-53.688202,287.0,
+SBSN,Santarém - Maestro Wilson Fonseca International Airport,BR,-2.422423,-54.79306,198.0,
+SBSP,Congonhas Airport,BR,-23.627657,-46.654601,2631.0,237.0
+SBSR,Prof. Eribelto Manoel Reino State Airport,BR,-20.817113,-49.406963,1784.0,151.0
+SBST,Santos Nero Moura Air Base / Guarujá Airport,BR,-23.928192,-46.300195,13.0,
+SBSV,Deputado Luiz Eduardo Magalhães International Airport,BR,-12.908611,-38.322498,64.0,200.5
+SBTE,Senador Petrônio Portela Airport,BR,-5.06025,-42.823712,219.0,
+SBUL,Ten. Cel. Aviador César Bombonato Airport,BR,-18.883579,-48.225936,3094.0,
+SBVT,Eurico de Aguiar Salles Airport,BR,-20258,-40285,34.0,
+SBYS,Campo Fontenelle,BR,-21.984692,-47.341207,1968.0,180.0

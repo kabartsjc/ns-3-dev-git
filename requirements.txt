@@ -1,0 +1,16 @@
+hatch
+PyQt6
+Rtree
+numpy
+matplotlib
+PyQt6
+scipy
+PyOpenGL
+PyOpenGL_accelerate
+pygame
+bluesky-simulator[full]
+pyopengl
+pygame
+pyqtwebengine
+requests
+
