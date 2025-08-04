@@ -138,8 +138,8 @@ def generate_aircraft(timestamp,navdata=List[NavData],num_air=int, max_number_ro
         rmv_time = seconds_to_ts(rmv_abs)
 
         #line_w = f"{timestamp}> DEST {callsign} {dest_code}"
-        line_w = f"{rmv_time}> DEL {callsign}"
-        aircraft_lines.append(line_w)
+        #line_w = f"{rmv_time}> DEL {callsign}"
+        #aircraft_lines.append(line_w)
 
 
 
