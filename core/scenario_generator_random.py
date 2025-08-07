@@ -137,11 +137,9 @@ def generate_aircraft(timestamp,navdata=List[NavData],num_air=int, max_number_ro
 
         rmv_time = seconds_to_ts(rmv_abs)
 
-        #line_w = f"{timestamp}> DEST {callsign} {dest_code}"
-        #line_w = f"{rmv_time}> DEL {callsign}"
-        #aircraft_lines.append(line_w)
-
-
+        line_w = f"{timestamp}> DEST {callsign} {dest_code}"
+        #line_w = f"{rmv_time}> DELRTE {callsign}"
+        aircraft_lines.append(line_w)
 
         aircraft_lines.append(f"#########")
         aircraft_lines.append(f"#########")
@@ -172,6 +170,6 @@ def save_file(file_path, scenario_content):
 
 
 # Run
-file_path = "/home/kabart/bluesky/scenario/my/brt_scen6.scn"
+file_path = "/home/kabart/bluesky/scenario/my/brt_scen7.scn"
 scenario_generator(file_path, noise="ON",num_aircraft=10, max_num_routes=3)
 

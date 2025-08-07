@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "controller.my_controller.AIControllerPlugin"
+  ],
+  "scenarios": [
+    "scenario.json"
+  ]
+}
