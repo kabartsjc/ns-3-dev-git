@@ -14,3 +14,4 @@ pygame
 pyqtwebengine
 requests
 cbor2
+geopy

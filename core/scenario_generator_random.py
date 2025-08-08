@@ -63,7 +63,7 @@ def init_config(timestamp, noise):
         f"#########"
     ]
 
-def generate_aircraft(timestamp,navdata=List[NavData],num_air=int, max_number_routes=int ):
+def generate_aircraft(orig_timestamp,navdata=List[NavData],num_air=int, max_number_routes=int ):
     aircraft_lines=[]
     airport_db = airports.load_airports("/home/kabart/github/atc-sim/config/simuairports.csv")
     aircrafts_db = aicrafts.load_aicrafts("/home/kabart/github/atc-sim/config/bada_common_aircrafts.csv")
@@ -71,6 +71,18 @@ def generate_aircraft(timestamp,navdata=List[NavData],num_air=int, max_number_ro
     for i in range(num_air):
         #generate create aircraft
         #0:00:00.00> CRE KLM117 C208/L -23.45 -46.46 270 100 220
+
+        #check if the timestamp will be updated
+        timestamp = orig_timestamp
+        random_i = random.randint(0, 1)
+       # if random_i==0:
+        #    start_time = datetime.datetime(2025, 1, 1, 0, 0, 0)
+         #   # Gera um valor aleatório entre 0 e 7200 segundos
+          #  random_offset = random.randint(0, 7200)
+           ## # Soma ao timestamp inicial
+            #new_time =start_time + datetime.timedelta(seconds=random_offset)
+            #timestamp = new_time.strftime("%H:%M:%S.00")
+
 
         line_w=f"#########"
         aircraft_lines.append(line_w)
@@ -92,7 +104,9 @@ def generate_aircraft(timestamp,navdata=List[NavData],num_air=int, max_number_ro
         origin = airport_db[origin_idx]
 
         origin_code = origin.airport_icao
-        elevation = origin.altitude
+        elevation = random.randint(1000, 5000)
+        if elevation <0:
+            elevation*-1
         heading = origin.runway_heading
 
         if math.isnan(heading):
@@ -111,6 +125,8 @@ def generate_aircraft(timestamp,navdata=List[NavData],num_air=int, max_number_ro
 
         dest_code = dest.airport_icao
         
+        dest_lat = dest.latitude
+        dest_long = dest.longitude
 
         route = geo.generate_random_route_between_airports(origin, dest,navdata,max_number_routes) 
         for wp in route:
@@ -122,7 +138,7 @@ def generate_aircraft(timestamp,navdata=List[NavData],num_air=int, max_number_ro
 
 
 
-        line_w = f"{timestamp}> DEST {callsign} {dest_code}"
+        line_w = f"{timestamp}> DEST {callsign} {dest_lat} {dest_long}"
         aircraft_lines.append(line_w)
 
 
@@ -170,6 +186,6 @@ def save_file(file_path, scenario_content):
 
 
 # Run
-file_path = "/home/kabart/bluesky/scenario/my/brt_scen7.scn"
-scenario_generator(file_path, noise="ON",num_aircraft=10, max_num_routes=3)
+file_path = "/home/kabart/bluesky/scenario/my/brt_scen8.scn"
+scenario_generator(file_path, noise="ON",num_aircraft=100, max_num_routes=4)
 

@@ -1,5 +1,10 @@
 0) check the inconsistences in the deletion of the aircrafts (check the calculus of ts)
 
+    preciso construir um hashtable com as aeroanves criadas com seus fpl e enviar para o atc.
+    O atc deve checar qual eh a posicao atual e verificar se bate com o destino
+    caso sim remover
+    esse metodo deve estar no     def remove_aircraft_arrived(self):
+
 
 1) Modify altitudes and speeds in the waypoints follow the flight plan rules
 

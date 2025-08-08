@@ -1,12 +1,10 @@
 import time
-import math
 import bluesky as bs
 from bluesky.core import Base
 from bluesky.network import subscriber
 from bluesky.network.client import Client
 from bluesky.stack import stack
-from geoutils import geo
-
+from geoutils import geo  # Usa sua função de distância personalizada
 
 
 class AircraftInfoCollector(Base):
@@ -18,7 +16,7 @@ class AircraftInfoCollector(Base):
     def acdata(self, data):
         self.aircraft.clear()
         for i in range(len(data.id)):
-            ac_id = data.id[i]
+            ac_id = data.id[i].strip()
             self.aircraft[ac_id] = {
                 'lat': data.lat[i],
                 'lon': data.lon[i],
@@ -29,9 +27,6 @@ class AircraftInfoCollector(Base):
                 'dest': data.dest[i] if hasattr(data, 'dest') else '',
             }
 
-    def get_aircraft(self, ac_id):
-        return self.aircraft.get(ac_id, None)
-
     def get_all_aircraft(self):
         return self.aircraft
 
@@ -41,24 +36,30 @@ def detect_and_resolve_conflicts(aircraft_data):
 
     for i in range(len(ids)):
         for j in range(i + 1, len(ids)):
-            ac1 = aircraft_data[ids[i]]
-            ac2 = aircraft_data[ids[j]]
+            ac1_id = ids[i]
+            ac2_id = ids[j]
+            ac1 = aircraft_data[ac1_id]
+            ac2 = aircraft_data[ac2_id]
 
             alt_diff = abs(ac1['alt'] - ac2['alt'])
-            horiz_dist = geo.haversine_nm(ac1['lat'], ac1['lon'], ac2['lat'], ac2['lon'])
+            horiz_dist = geo.distance_haversine(ac1['lat'], ac1['lon'], ac2['lat'], ac2['lon'])
 
             if alt_diff < 1000 and horiz_dist < 5:
-                print(f"[CONFLICT] Between {ids[i]} and {ids[j]}: alt_diff={alt_diff} ft, dist={horiz_dist:.2f} NM")
+                print(f"[{time.strftime('%H:%M:%S')}] [CONFLICT] {ac1_id} vs {ac2_id} | "
+                      f"alt_diff={alt_diff:.1f} ft, dist={horiz_dist:.2f} NM")
 
-                # Resolve: climb one and descend the other
-                new_alt_1 = int(ac1['alt'] + 1000)
-                new_alt_2 = int(ac2['alt'] - 1000)
+                new_alt_1 = max(1000, min(45000, int(ac1['alt'] + 1000)))
+                new_alt_2 = max(1000, min(45000, int(ac2['alt'] - 1000)))
 
-                print(f"[RESOLVE] Command: {ids[i]} ALT {new_alt_1}")
-                print(f"[RESOLVE] Command: {ids[j]} ALT {new_alt_2}")
+                # ✅ Formato que FUNCIONA no seu ambiente: <CALLSIGN> ALT <VALUE>
+                cmd1 = f"{ac1_id} ALT {new_alt_1}"
+                cmd2 = f"{ac2_id} ALT {new_alt_2}"
 
-                stack(f"ALT {ids[i]} {new_alt_1}")
-                stack(f"ALT {ids[j]} {new_alt_2}")
+                print(f"[DEBUG] Enviando: {cmd1}")
+                print(f"[DEBUG] Enviando: {cmd2}")
+
+                stack(cmd1)
+                stack(cmd2)
 
 
 def main():
@@ -68,6 +69,9 @@ def main():
     print("[INFO] AI ATC Client with Conflict Resolution started")
 
     aircraft_info_collector = AircraftInfoCollector()
+
+    # ✅ Comando de teste para validar que o stack está ativo
+    #stack("ABC17 ALT 6000")  # <- substitua por callsign válido no seu cenário
 
     while True:
         client.update()

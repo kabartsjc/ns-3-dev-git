@@ -18,6 +18,8 @@ def distance_haversine(lat1, lon1, lat2, lon2):
 
     return R * c
 
+
+
 def angle_between(p1, p2, wp):
     """Calculates the angle between the route origin-destination and the intermediate waypoint."""
     def to_vector(a, b):
