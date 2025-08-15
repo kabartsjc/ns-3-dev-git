@@ -5,7 +5,7 @@ from bluesky.core import Base
 from bluesky.network import subscriber
 from bluesky.network.client import Client
 from bluesky.stack import stack
-from geoutils import geo  # Uses your custom haversine distance function
+from atc.utils.geoutils import geo  # Uses your custom haversine distance function
 
 
 # --- Separation standards based on ICAO Doc 4444, Annex 11, and DECEA ICA 100-37 ---

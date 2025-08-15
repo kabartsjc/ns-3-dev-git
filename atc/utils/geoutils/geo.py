@@ -1,8 +1,8 @@
 import math
 import random
 from typing import List
-from core.navdata import NavData
-from core.airports import Airport
+from atc.core.navdata import NavData
+from atc.core.airports import Airport
 
 def distance_haversine(lat1, lon1, lat2, lon2):
     """Calculates the distance in km between two geographic points using the Haversine formula."""
