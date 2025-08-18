@@ -5,10 +5,10 @@ from navdata import NavData
 import airports
 from airports import Airport
 
-import geoutils.geo as geo
+import atc.utils.geoutils.geo as geo
 
-import core.aircrafts as aicrafts
-from core.aircrafts import Aircraft
+import atc.core.aircrafts as aicrafts
+from atc.core.aircrafts import Aircraft
 
 from typing import List, Optional
 import random
@@ -45,7 +45,7 @@ def scenario_generator(output_path: str, noise: str, num_aircraft:int, max_num_r
 
 def add_waypoints(timestamp):
     waypoints_line = []
-    all_navdata = navdata.load_all_navdata("/home/kabart/github/atc-sim/config/fix.csv")
+    all_navdata = navdata.load_all_navdata("/home/kabart/github/atc-sim/atc/config/fix.csv")
 
     for entry in all_navdata:
         line = f"{timestamp}>DEFWPT {entry.waypoint}, {entry.latitude}, {entry.longitude},FIX"
@@ -65,8 +65,8 @@ def init_config(timestamp, noise):
 
 def generate_aircraft(orig_timestamp,navdata=List[NavData],num_air=int, max_number_routes=int ):
     aircraft_lines=[]
-    airport_db = airports.load_airports("/home/kabart/github/atc-sim/config/simuairports.csv")
-    aircrafts_db = aicrafts.load_aicrafts("/home/kabart/github/atc-sim/config/bada_common_aircrafts.csv")
+    airport_db = airports.load_airports("/home/kabart/github/atc-sim/atc/config/simuairports.csv")
+    aircrafts_db = aicrafts.load_aicrafts("/home/kabart/github/atc-sim/atc/config/bada_common_aircrafts.csv")
 
     for i in range(num_air):
         #generate create aircraft
@@ -186,6 +186,6 @@ def save_file(file_path, scenario_content):
 
 
 # Run
-file_path = "/home/kabart/bluesky/scenario/my/brt_scen8.scn"
+file_path = "/home/kabart/github/atc-sim/atc/scenarios/brt_scen8.scn"
 scenario_generator(file_path, noise="ON",num_aircraft=100, max_num_routes=4)
 

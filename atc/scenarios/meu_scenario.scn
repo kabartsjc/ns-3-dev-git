@@ -1,0 +1,9 @@
+# cria 2 voos
+CRE AAL123, KLAX, KSFO, 350, 450
+CRE DAL456, KSFO, KLAX, 340, 440
+
+# passo de simulação (segundos)
+DT 1
+
+# inicia a simulação
+RUN

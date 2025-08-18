@@ -1,0 +1,18 @@
+{
+  "controller": { "lat": 38.880, "lon": -77.020, "alt_m": 100 },
+  "adsb_stations": [
+    {"id":"A01","lat":38.95,"lon":-77.10,"alt_m":30,"rx_range_km":220,"base_delay_ms":8,"jitter_ms":2,"loss":0.01},
+    {"id":"A02","lat":39.00,"lon":-76.90,"alt_m":30,"rx_range_km":220,"base_delay_ms":8,"jitter_ms":2,"loss":0.01}
+  ],
+  "radars": [
+    {"id":"R01","lat":38.90,"lon":-77.15,"alt_m":50,"max_range_km":250,"pri_s":0.001,"update_s":5.0,
+     "proc_ms":15,"jitter_ms":3,"pd":0.95,"pf":1e-6}
+  ],
+  "channel": {
+    "c": 299792458.0,
+    "controller_proc_ms": 3,
+    "adsb_air_tx_period_s": 0.5, 
+    "radar_meas_latency_ms_extra": 0,     
+    "comment": "adsb_air_tx_period_s = 2Hz"
+  }
+}

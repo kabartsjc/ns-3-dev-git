@@ -1,0 +1,11 @@
+name: bluesky-stable
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - qt=5.15.*
+  - pyqt=5.15.*
+  - pip
+  - pip:
+      - bluesky-simulator[full]
