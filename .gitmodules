@@ -1,0 +1,3 @@
+[submodule "atc/bluesky"]
+	path = atc/bluesky
+	url = https://github.com/TUDelft-CNS-ATM/bluesky
