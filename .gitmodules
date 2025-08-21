@@ -1,3 +1,6 @@
 [submodule "atc/bluesky"]
 	path = atc/bluesky
 	url = https://github.com/TUDelft-CNS-ATM/bluesky
+[submodule "net/ns3"]
+	path = net/ns3
+	url = https://github.com/nsnam/ns-3-dev-git
