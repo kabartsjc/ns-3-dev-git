@@ -80,6 +80,8 @@ main(int argc, char* argv[])
     NetDeviceContainer csmaDevices;
     csmaDevices = csma.Install(csmaNodes);
 
+  
+
     NodeContainer wifiStaNodes;
     wifiStaNodes.Create(nWifi);
     NodeContainer wifiApNode = p2pNodes.Get(0);
