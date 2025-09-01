@@ -4,9 +4,6 @@
 [submodule "net/ns3"]
 	path = net/ns3
 	url = https://github.com/nsnam/ns-3-dev-git
-[submodule "net/third_party/ns3-cosim"]
-	path = net/third_party/ns3-cosim
-	url = https://github.com/usnistgov/ns3-cosim.git
 [submodule "net/ns3-cosim"]
 	path = net/ns3-cosim
 	url = https://github.com/usnistgov/ns3-cosim.git
